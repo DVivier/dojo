@@ -1,7 +1,7 @@
 package dojo;
 
 public class MainGestionException {
-    public static void gestionExceptionFactoriel() {
+    public static void main(String[] args) {
 // Calcul sans exception
         System.out.println(" 0! = " + calculFactoriel(0));
         System.out.println(" 4! = " + calculFactoriel(4));

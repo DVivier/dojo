@@ -11,7 +11,8 @@ import java.util.List;
 //import static java.nio.file.Files.readAllLines;
 
 public class MainGestionFichiers {
-    public static void GestionFichiers(String chemin) {
+    public static void main(String[] args) {
+        String chemin="src/dojo/Lyrics.txt";
         List<String> lignes = new ArrayList<>() ;
         UnFichier monFichier = new UnFichier(chemin);
         boolean existe = monFichier.ouvrirFichier();

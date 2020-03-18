@@ -7,7 +7,7 @@ public class Main {
 //        MainTemperature.temperature();
 
 //       Exo Objets, interface     - Gestion température (maison, datacenter)
-        MainGestionException.gestionExceptionFactoriel();
+//        MainGestionException.gestionExceptionFactoriel();
 
 //        EXO API - Gestion de fichiers
 //        MainGestionFichiers.GestionFichiers("src/dojo/Lyrics.txt");
