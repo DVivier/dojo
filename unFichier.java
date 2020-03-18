@@ -86,6 +86,9 @@ public class unFichier {
             lignesSortie.add(cle + " : " + mapOccurences.get(cle));
         }
 
+        lignesSortie.add("Nombre total de mots :" + nombreTotalMots);
+        lignesSortie.add("Nombre de mots différents :" + mapOccurences.size());
+
 //          Recherche du nom de fichier libre en sortie
         int compteur = 1;
         Path leFichierEnSortie = Paths.get(cheminDuFichier + "\\" + resultat + compteur + ".txt");
