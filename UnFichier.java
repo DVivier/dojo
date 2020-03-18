@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class unFichier {
+public class UnFichier {
     private static Path cheminDuFichier;
     private static String nomFichierEntree;
     private static String nomFichierEntreeAvecChemin;
@@ -21,25 +21,25 @@ public class unFichier {
     private static Map<String, Integer> mapOccurencesMinuscules = new TreeMap<>();
 
     // ***************************************************
-    public unFichier(String nomFichierEntreeAvecChemin) {
+     UnFichier(String nomFichierEntreeAvecChemin) {
         this.nomFichierEntreeAvecChemin = nomFichierEntreeAvecChemin;
     }
 
     // ***************************************************
-    public static boolean OuvrirFichier() {
+    public static boolean ouvrirFichier() {
         leFichier = Paths.get(nomFichierEntreeAvecChemin);
         cheminDuFichier = leFichier.getParent();
         return Files.exists(leFichier);
     }
 
     // ***************************************************
-    public static List LireToutLeFichier() throws IOException {
+    public static List lireToutLeFichier() throws IOException {
 
         return Files.readAllLines(leFichier);
     }
 
     // ***************************************************
-    public void ComptabiliserTableauMots(String[] tableauMots) {
+    public void comptabiliserTableauMots(String[] tableauMots) {
 
 //        for (int i = 0; i < tableauMots.length; i++) {
         for (String tableauMot : tableauMots) {
@@ -62,7 +62,7 @@ public class unFichier {
     }
 
     // ***************************************************
-    public void AfficherLesMotsAvecOccurence() {
+    public void afficherLesMotsAvecOccurence() {
         for (String cle : mapOccurences.keySet()) {
             System.out.print(cle);
             System.out.print(" : ");
@@ -72,14 +72,14 @@ public class unFichier {
     }
 
     // ***************************************************
-    public void EcrireResultat() throws IOException {
-        EcrireResultatUnFichier(mapOccurences, "resultat");
-        EcrireResultatUnFichier(mapOccurencesMinuscules, "resultat_min");
+    public void ecrireResultat() throws IOException {
+        ecrireResultatUnFichier(mapOccurences, "resultat");
+        ecrireResultatUnFichier(mapOccurencesMinuscules, "resultat_min");
     }
 
 
     // ***************************************************
-    private void EcrireResultatUnFichier(Map<String, Integer> mapOccurences, String resultat) throws IOException {
+    private void ecrireResultatUnFichier(Map<String, Integer> mapOccurences, String resultat) throws IOException {
         ArrayList<String> lignesSortie = new ArrayList<>();
 //          pour chaque occurence de la map, on stock une ligne dans l'ArrayList avec clé + valeur
         for (String cle : mapOccurences.keySet()) {
@@ -105,7 +105,20 @@ public class unFichier {
     }
 
 
-//    public static void ComptabiliserTableauMots(String[] tableauMots){
-//
-//    }
+    // ***************************************************
+    public  List<String> obtenirMotPlusUtilise() {
+        int maxOccurences = 0;
+        ArrayList<String> lignesSortie = new ArrayList<>();
+//          pour chaque occurence de la map, on stock une ligne dans l'ArrayList avec clé + valeur
+        for (String cle : mapOccurences.keySet()) {
+            if (mapOccurences.get(cle) > maxOccurences) {
+                lignesSortie.clear();
+                lignesSortie.add(cle);
+                maxOccurences = mapOccurences.get(cle);
+            } else if (mapOccurences.get(cle) == maxOccurences) {
+                lignesSortie.add(cle);
+            }
+        }
+        return lignesSortie;
+    }
 }

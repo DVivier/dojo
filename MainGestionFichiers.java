@@ -13,11 +13,11 @@ import java.util.List;
 public class MainGestionFichiers {
     public static void GestionFichiers(String chemin) {
         List<String> lignes = new ArrayList<>() ;
-        unFichier monFichier = new unFichier(chemin);
-        boolean existe = monFichier.OuvrirFichier();
+        UnFichier monFichier = new UnFichier(chemin);
+        boolean existe = monFichier.ouvrirFichier();
         if (existe) {
             try {
-                lignes = monFichier.LireToutLeFichier();
+                lignes = monFichier.lireToutLeFichier();
             } catch (IOException e) {
                 e.printStackTrace();
                 System.exit(666);
@@ -27,18 +27,21 @@ public class MainGestionFichiers {
                 UneLigne ligne = new UneLigne(lignes.get(i));
                 String[] tableauMots = ligne.DecouperLigneEnMots();
                 if (tableauMots != null) {
-                    monFichier.ComptabiliserTableauMots(tableauMots);
+                    monFichier.comptabiliserTableauMots(tableauMots);
                 }
             }
 //            monFichier.AfficherLesMotsAvecOccurence();
 
             try {
-                monFichier.EcrireResultat();
+                monFichier.ecrireResultat();
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
-
+//              Récupération du ou des mots les plus utlisés
+            List<String> listeMotPlusUtlise = new ArrayList<>();
+            listeMotPlusUtlise = monFichier.obtenirMotPlusUtilise();
+            System.out.println(listeMotPlusUtlise);
         }
     }
 }
