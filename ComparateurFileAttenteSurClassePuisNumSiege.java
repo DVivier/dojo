@@ -6,19 +6,15 @@ import java.util.function.ToDoubleFunction;
 import java.util.function.ToIntFunction;
 import java.util.function.ToLongFunction;
 
-public class MonComparateurFileAttente implements Comparator {
+public class ComparateurFileAttenteSurClassePuisNumSiege implements Comparator {
     @Override
     public int compare(Object o1, Object o2) {
         Voyageur voyageur1 = (Voyageur) o1;
         Voyageur voyageur2 = (Voyageur) o2;
-//        System.out.println("comparator");
+
         Integer ordinal1 = voyageur1.typeDeClasse.ordinal();
         Integer ordinal2 = voyageur2.typeDeClasse.ordinal();
         int resultatCompareClasse = ordinal1.compareTo(ordinal2);
-
-//        System.out.print(voyageur1.typeDeClasse.ordinal());
-//        System.out.println(voyageur2.typeDeClasse.ordinal());
-//        System.out.println(ordinal1.compareTo(ordinal2));
 
         if (resultatCompareClasse == 0) {
             Integer numero1 = voyageur1.numeroSiege;
@@ -27,21 +23,6 @@ public class MonComparateurFileAttente implements Comparator {
         }
         return (resultatCompareClasse);
 
-//        return ((Voyageur) o2).compareTo((Voyageur) o1);
-//        System.out.print(voyageur1.typeDeClasse.ordinal());
-//        System.out.print(" / ");
-//        System.out.println(voyageur2.typeDeClasse.ordinal());
-//        if (voyageur1.typeDeClasse.ordinal() == voyageur2.typeDeClasse.ordinal()) {
-//            return 0;
-//        }
-//        if (voyageur1.typeDeClasse.ordinal() < voyageur2.typeDeClasse.ordinal()) {
-//            return -1;
-//        }
-////        if (voyageur1.typeDeClasse.ordinal() < voyageur2.typeDeClasse.ordinal()) {
-//            return 1;
-////        }
-//
-//        //        return 0;
     }
 
     @Override
