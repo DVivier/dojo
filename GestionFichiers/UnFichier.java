@@ -1,4 +1,4 @@
-package dojo;
+package dojo.GestionFichiers;
 
 import java.io.IOException;
 import java.nio.file.Files;

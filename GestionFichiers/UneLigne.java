@@ -1,4 +1,4 @@
-package dojo;
+package dojo.GestionFichiers;
 
 public class UneLigne {
     private static String ligne;

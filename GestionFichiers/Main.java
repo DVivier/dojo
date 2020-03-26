@@ -1,16 +1,17 @@
-package dojo;
+package dojo.GestionFichiers;
 
 //import javafx.scene.shape.Path;
 
 //import java.nio.file.Files;
 //import java.nio.file.Paths;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 //import static java.nio.file.Files.readAllLines;
 
-public class MainGestionFichiers {
+public class Main {
     public static void main(String[] args) {
         String chemin="src/dojo/Lyrics.txt";
         List<String> lignes = new ArrayList<>() ;
