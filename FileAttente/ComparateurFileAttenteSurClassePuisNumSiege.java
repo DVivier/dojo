@@ -1,4 +1,4 @@
-package dojo;
+package dojo.FileAttente;
 
 import java.util.Comparator;
 import java.util.function.Function;

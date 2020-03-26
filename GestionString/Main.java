@@ -1,6 +1,6 @@
-package dojo;
+package dojo.GestionString;
 
-public class MainGestionString {
+public class Main {
 
     public static void main(String[] args) {
         String enMinuscule = "minusa et encore a ";

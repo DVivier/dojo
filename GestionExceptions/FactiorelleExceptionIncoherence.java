@@ -1,4 +1,4 @@
-package dojo;
+package dojo.GestionExceptions;
 
 public class FactiorelleExceptionIncoherence extends Exception {
     public FactiorelleExceptionIncoherence() {

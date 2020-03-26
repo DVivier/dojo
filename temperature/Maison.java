@@ -1,4 +1,4 @@
-package dojo;
+package dojo.temperature;
 
 public class Maison implements AvecChauffage, AvecClimatisation {
     float temperature ;

@@ -1,4 +1,4 @@
-package dojo;
+package dojo.FileAttente;
 
 public class Voyageur {
 //    public class Voyageur implements Comparable{

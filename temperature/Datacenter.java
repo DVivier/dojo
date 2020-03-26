@@ -1,4 +1,4 @@
-package dojo;
+package dojo.temperature;
 
 public class Datacenter implements AvecClimatisation {
     float temperature ;

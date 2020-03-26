@@ -1,7 +1,9 @@
-package dojo;
+package dojo.temperature;
 
-public class MainTemperature {
-    public static void temperature() {
+public class Main {
+    public static void main(String[] args) {
+
+
         Maison uneMaison = new Maison() ;
 
         System.out.println(uneMaison);

@@ -1,4 +1,4 @@
-package dojo;
+package dojo.GestionExceptions;
 
 public class FactorielleExceptionNegatif extends Exception{
 

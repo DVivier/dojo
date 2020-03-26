@@ -1,4 +1,4 @@
-package dojo;
+package dojo.FileAttente;
 
 public enum TypeDeClasse {
     BUSINESS ,
